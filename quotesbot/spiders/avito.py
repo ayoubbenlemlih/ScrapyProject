@@ -30,4 +30,5 @@ class LoginSpider(scrapy.Spider):
         return
 
     def form(self, response):
-        return response.body
+        self.logger.info(response.body)
+        return
