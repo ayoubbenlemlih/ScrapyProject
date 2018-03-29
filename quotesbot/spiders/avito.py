@@ -2,9 +2,25 @@ import scrapy
 
 class LoginSpider(scrapy.Spider):
     name = 'avito'
-    start_urls = ['https://www2.avito.ma/ai/form/0']
+    start_urls = ['https://www.avito.ma/account/login']
 
     def parse(self, response):
+        return scrapy.FormRequest.from_response(
+            response,
+            formdata={'email': 'ayoub.benlemlih@gmail.com', 'passwd': 'youssef2010', 'login': 'Se connecter'},
+            callback=self.form
+        )
+    def form(self, response):
+        return scrapy.Request(url="https://www2.avito.ma/ai/form/0",
+            callback=self.create
+        )
+
+    def create(self, response):
+        # check login succeed before going on
+        if "Nabil" not in response.body:
+            self.logger.info("Login failed")
+            return
+        self.logger.info("Login success")
         body = '''------WebKitFormBoundary5M31VB0KGabpTJF8
         Content-Disposition: form-data; name="category_group"
 
@@ -109,7 +125,7 @@ class LoginSpider(scrapy.Spider):
         ------WebKitFormBoundary5M31VB0KGabpTJF8
         Content-Disposition: form-data; name="passwd"
 
-        youssef2010
+        
         ------WebKitFormBoundary5M31VB0KGabpTJF8
         Content-Disposition: form-data; name="account_type"
 
@@ -124,10 +140,9 @@ class LoginSpider(scrapy.Spider):
 
         ------WebKitFormBoundary5M31VB0KGabpTJF8--
         '''
-        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",body=body,headers={'Content-Type':'multipart/form-data; boundary=----WebKitFormBoundary5M31VB0KGabpTJF8'},
-                    callback=self.after_login)
-        
+        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",body=body,headers={'Content-Type':'multipart/form-data; boundary=------WebKitFormBoundary5M31VB0KGabpTJF8'},
+                    callback=self.after_create)
 
-    def after_login(self, response):
+    def after_create(self, response):
         self.logger.info(response.body)
         return
