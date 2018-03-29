@@ -1,7 +1,7 @@
 import scrapy
 
 class LoginSpider(scrapy.Spider):
-    name = 'example.com'
+    name = 'avito'
     start_urls = ['https://www.avito.ma/account/login']
 
     def parse(self, response):
