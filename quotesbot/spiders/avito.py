@@ -141,7 +141,7 @@ class LoginSpider(scrapy.Spider):
         ------WebKitFormBoundaryvK2CBXmGBBLqBPsP--
         '''
         return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",body=body,headers={'Content-Type':'multipart/form-data; boundary=----WebKitFormBoundaryvK2CBXmGBBLqBPsP'},
-                    callback=self.form)
+                    callback=self.form,dont_filter=True)
 
     def form(self, response):
         self.logger.info(response.body)
