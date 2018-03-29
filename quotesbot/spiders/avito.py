@@ -18,7 +18,7 @@ class LoginSpider(scrapy.Spider):
             return
         self.logger.info("Login success")
         return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",headers={'Content-Type':'multipart/form-data'},
-                    formdata={'account_type':'0', 'address':'', 'area':'154', 'beds':'', 'body':'azazazazazazazazazazazazazaz', 'brand':'', 'category_group':'7010', 'chosenVAS':'', 'chosenVasId':'', 'company_ad':'0', 'email':'ayoub.benlemlih@gmail.com', 'fuel':'', 'images[]':'', 'lang':'fr', 'mandatory_cv':'0', 'mileage':'', 'model':'', 'name':'Nabil', 'passwd':'', 'pfiscale':'', 'phone':'0615016786', 'price':'10', 'price_meter':'0', 'regdate':'', 'region':'17', 'rooms':'', 'size':'', 'subject':'ddddddddd', 'type':'s', 'email_confirm' :'ayoub.benlemlih@gmail.com','validate':'Déposez votre annonce »'},
+                    formdata={'account_type':'0', 'address':'', 'area':'154', 'beds':'', 'body':'azazazazazazazazazazazazazaz', 'brand':'', 'category_group':'7010', 'chosenVAS':'', 'chosenVasId':'', 'company_ad':'0', 'email':'ayoub.benlemlih@gmail.com', 'fuel':'', 'images[]':'', 'lang':'fr', 'mandatory_cv':'0', 'mileage':'', 'model':'', 'name':'Nabil', 'passwd':'youssef2010', 'pfiscale':'', 'phone':'0615016786', 'price':'10', 'price_meter':'0', 'regdate':'', 'region':'17', 'rooms':'', 'size':'', 'subject':'ddddddddd', 'type':'s', 'email_confirm' :'ayoub.benlemlih@gmail.com','validate':'Déposez votre annonce »'},
                     callback=self.form,dont_filter=False)
 
     def form(self, response):
