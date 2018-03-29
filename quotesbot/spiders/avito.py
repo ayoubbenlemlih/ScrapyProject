@@ -13,7 +13,7 @@ class LoginSpider(scrapy.Spider):
 
     def after_login(self, response):
         # check login succeed before going on
-        if "Changez cela aujourd" not in response.body:
+        if "Nabil" not in response.body:
             self.logger.info("Login failed")
             return
         self.logger.info("Login success")
