@@ -12,7 +12,7 @@ class LoginSpider(scrapy.Spider):
         )
     def form(self, response):
         return scrapy.Request(url="https://www2.avito.ma/ai/form/0",
-            callback=self.create
+            callback=self.create,dont_filter=True
         )
 
     def create(self, response):
@@ -141,7 +141,7 @@ class LoginSpider(scrapy.Spider):
         ------WebKitFormBoundary5M31VB0KGabpTJF8--
         '''
         return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",body=body,headers={'Content-Type':'multipart/form-data; boundary=------WebKitFormBoundary5M31VB0KGabpTJF8'},
-                    callback=self.after_create)
+                    callback=self.after_create,dont_filter=True)
 
     def after_create(self, response):
         self.logger.info(response.body)
