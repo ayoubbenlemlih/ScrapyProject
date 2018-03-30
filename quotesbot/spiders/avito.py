@@ -10,13 +10,16 @@ class LoginSpider(scrapy.Spider):
             formdata={'email': 'ayoub.benlemlih@gmail.com', 'passwd': 'youssef2010', 'login': 'Se connecter'},
             callback=self.after_login
         )
-
+    
     def after_login(self, response):
         # check login succeed before going on
         if "Nabil" not in response.body:
             self.logger.info("Login failed")
             return
         self.logger.info("Login success")
+        return scrapy.Request (url = "https://www2.avito.ma/ai/form/0" , callback = self.create,dont_filter=True)
+
+    def create(self, response):
         body = '''------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="category_group"
 
