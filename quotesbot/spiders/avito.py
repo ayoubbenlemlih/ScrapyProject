@@ -125,25 +125,6 @@ class LoginSpider(scrapy.Spider):
         0615016786
         ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="email_confirm"
-
-        ayoub.benlemlih@gmail.com
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
-        Content-Disposition: form-data; name="passwd"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
-        Content-Disposition: form-data; name="account_type"
-
-        0
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
-        Content-Disposition: form-data; name="chosenVasId"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
-        Content-Disposition: form-data; name="chosenVAS"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy--
         '''
         self.logger.info("headers form"+str(response.request.headers))
         self.logger.info("body form"+str(response.request.body))  
