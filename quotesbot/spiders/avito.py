@@ -125,7 +125,7 @@ class LoginSpider(scrapy.Spider):
         ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="passwd"
 
-
+        youssef2010
         ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="account_type"
 
