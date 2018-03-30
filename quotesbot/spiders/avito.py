@@ -17,86 +17,130 @@ class LoginSpider(scrapy.Spider):
             self.logger.info("Login failed")
             return
         self.logger.info("Login success")
-        body = '''------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        body = '''------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="category_group"
+
         7010
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="type"
+
         s
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="lang"
+
         fr
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="rooms"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="beds"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="size"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="brand"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="model"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="fuel"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="regdate"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="mileage"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="pfiscale"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="region"
-        7
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+        17
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="area"
-        566
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+        154
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="address"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="subject"
-        eeeeeeeeeeeeeee
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+        ffffffffffffffffffffffffffffffffffffff
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="body"
-        aoaoaoaoaoaoaoaoaoaoaoaoa
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+        dddddddddddddddddddddddddddddddddddd
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="mandatory_cv"
+
         0
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="price"
-        800 000
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+        100 000
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="price_meter"
+
         0
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="images[]"; filename=""
         Content-Type: application/octet-stream
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="company_ad"
+
         0
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="name"
+
         Nabil
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="email"
+
         ayoub.benlemlih@gmail.com
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="phone"
+
         0615016786
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="email_confirm"
+
         ayoub.benlemlih@gmail.com
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="passwd"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="account_type"
+
         0
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="chosenVasId"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="chosenVAS"
-        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP--
+
+
+        ------WebKitFormBoundary5tKbPFdKTvzi2zTy--
         '''
-        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",body=body,headers={'Content-Type':'multipart/form-data; boundary=----WebKitFormBoundaryvK2CBXmGBBLqBPsP'},
+        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",body=body,headers={'Content-Type':'multipart/form-data; boundary=----WebKitFormBoundary5tKbPFdKTvzi2zTy'},
                     callback=self.form,dont_filter=True)
 
     def form(self, response):
