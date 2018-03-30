@@ -17,9 +17,11 @@ class LoginSpider(scrapy.Spider):
             self.logger.info("Login failed")
             return
         self.logger.info("Login success")
-        return scrapy.Request (url = "https://www2.avito.ma/ai/form/0" , callback = self.create,dont_filter=True)
+        self.logger.info("headers login"+str(response.request.headers))
+        self.logger.info("body login"+str(response.request.body))
+        return scrapy.Request (url = "https://www2.avito.ma/ai/form/0" , callback = self.form,dont_filter=True)
 
-    def create(self, response):
+    def form(self, response):
         body = '''------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="category_group"
 
@@ -143,9 +145,13 @@ class LoginSpider(scrapy.Spider):
 
         ------WebKitFormBoundary5tKbPFdKTvzi2zTy--
         '''
+        self.logger.info("headers form"+str(response.request.headers))
+        self.logger.info("body form"+str(response.request.body))  
         return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",method = 'POST',body=body,headers={'Content-Type':'multipart/form-data; boundary=----WebKitFormBoundary5tKbPFdKTvzi2zTy'},
-                    callback=self.form,dont_filter=True)
+                    callback=self.create,dont_filter=True)
 
-    def form(self, response):
+    def create(self, response):
         self.logger.info(response.body)
+        self.logger.info("headers create"+str(response.request.headers))
+        self.logger.info("body create"+str(response.request.body))        
         return
