@@ -17,135 +17,88 @@ class LoginSpider(scrapy.Spider):
             self.logger.info("Login failed")
             return
         self.logger.info("Login success")
-        self.logger.info("headers Login"+str(response.request.headers))
-        body = '''------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        body = '''------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="category_group"
-
         7010
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="type"
-
         s
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="lang"
-
         fr
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="rooms"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="beds"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="size"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="brand"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="model"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="fuel"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="regdate"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="mileage"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="pfiscale"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="region"
-
-        17
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        7
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="area"
-
-        154
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        566
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="address"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="subject"
-
-        ffffffffffffffffffffffffffffffffffffff
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        eeeeeeeeeeeeeee
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="body"
-
-        dddddddddddddddddddddddddddddddddddd
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        aoaoaoaoaoaoaoaoaoaoaoaoa
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="mandatory_cv"
-
         0
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="price"
-
-        100 000
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        800 000
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="price_meter"
-
         0
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="images[]"; filename=""
         Content-Type: application/octet-stream
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="company_ad"
-
         0
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="name"
-
         Nabil
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="email"
-
         ayoub.benlemlih@gmail.com
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="phone"
-
         0615016786
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="email_confirm"
-
         ayoub.benlemlih@gmail.com
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="passwd"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="account_type"
-
         0
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="chosenVasId"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="chosenVAS"
-
-
-        ------WebKitFormBoundary5tKbPFdKTvzi2zTy--
+        ------WebKitFormBoundaryvK2CBXmGBBLqBPsP--
         '''
-        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",body=body,headers={'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary5tKbPFdKTvzi2zTy'},
-                     callback=self.form)
+        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",body=body,headers={'Content-Type':'multipart/form-data; boundary=----WebKitFormBoundaryvK2CBXmGBBLqBPsP'},
+                    callback=self.form,dont_filter=True)
 
     def form(self, response):
         self.logger.info(response.body)
-        self.logger.info("success form")
-        self.logger.info("headers form"+str(response.request.headers))
         return
