@@ -18,7 +18,6 @@ class LoginSpider(scrapy.Spider):
             return
         self.logger.info("Login success")
         self.logger.info("headers Login"+str(response.request.headers))
-        self.logger.info("body login"+str(response.request.body))
         body = '''------WebKitFormBoundaryvK2CBXmGBBLqBPsP
         Content-Disposition: form-data; name="category_group"
         7010
@@ -104,5 +103,4 @@ class LoginSpider(scrapy.Spider):
     def form(self, response):
         self.logger.info("success form")
         self.logger.info("headers form"+str(response.request.headers))
-        self.logger.info("body form"+str(response.request.body))
         return
