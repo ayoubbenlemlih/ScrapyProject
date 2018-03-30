@@ -7,7 +7,7 @@ class LoginSpider(scrapy.Spider):
     def parse(self, response):
         return scrapy.FormRequest.from_response(
             response,
-            formdata={'email': 'ayoub.benlemlih@gmail.com', 'passwd': 'youssef2010', 'login': 'Se connecter'},
+            formdata={'email': 'ayoub.benlemlih@gmail.com', 'passwd': 'youssef2010', 'login': 'Se connecter'},headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7', 'cache-control': 'max-age=0', 'content-type': 'application/x-www-form-urlencoded', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'},
             callback=self.after_login
         )
     
@@ -19,7 +19,8 @@ class LoginSpider(scrapy.Spider):
         self.logger.info("Login success")
         self.logger.info("headers login"+str(response.request.headers))
         self.logger.info("body login"+str(response.request.body))
-        return scrapy.Request (url = "https://www2.avito.ma/ai/form/0" , callback = self.form,dont_filter=True)
+        return scrapy.Request (url = "https://www2.avito.ma/ai/form/0" ,headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7', 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'},
+ callback = self.form,dont_filter=True)
 
     def form(self, response):
         body = '''------WebKitFormBoundary5tKbPFdKTvzi2zTy
@@ -130,7 +131,7 @@ class LoginSpider(scrapy.Spider):
         ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="passwd"
 
-        youssef2010
+
         ------WebKitFormBoundary5tKbPFdKTvzi2zTy
         Content-Disposition: form-data; name="account_type"
 
@@ -147,7 +148,7 @@ class LoginSpider(scrapy.Spider):
         '''
         self.logger.info("headers form"+str(response.request.headers))
         self.logger.info("body form"+str(response.request.body))  
-        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",method = 'POST',body=body,headers={'Content-Type':'multipart/form-data; boundary=----WebKitFormBoundary5tKbPFdKTvzi2zTy'},
+        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",method = 'POST',body=body,headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7', 'cache-control': 'max-age=0', 'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary5tKbPFdKTvzi2zTy',  'origin': 'https://www2.avito.ma', 'referer': 'https://www2.avito.ma/ai/form/0', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'},
                     callback=self.create,dont_filter=True)
 
     def create(self, response):
