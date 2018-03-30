@@ -17,5 +17,5 @@ class LoginSpider(scrapy.Spider):
             self.logger.info("Login failed")
             return
         self.logger.info("Login success")
-        self.logger.info("header: "+response.request.headers['User-Agent'])
+        self.logger.info("header: "+response.request.headers)
         return
