@@ -1,4 +1,5 @@
 import scrapy
+import json
 
 class LoginSpider(scrapy.Spider):
     name = 'avito'
@@ -23,9 +24,10 @@ class LoginSpider(scrapy.Spider):
 
     def form(self, response):
         self.logger.info("headers form"+str(response.request.headers))
-        self.logger.info("body form"+str(response.request.body))  
-        return scrapy.FormRequest(url="https://www2.avito.ma/ai/create/0",method = 'POST',headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7', 'cache-control': 'max-age=0', 'content-type': 'multipart/form-data',  'origin': 'https://www2.avito.ma', 'referer': 'https://www2.avito.ma/ai/form/0', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'},
-                                  formdata={'account_type':'0', 'address':'', 'area':'154', 'beds':'', 'body':'azazazazazazazazazazazazazaz', 'brand':'', 'category_group':'7010', 'chosenVAS':'', 'chosenVasId':'', 'company_ad':'0', 'email':'ayoub.benlemlih@gmail.com', 'fuel':'', 'images[]':'', 'lang':'fr', 'mandatory_cv':'0', 'mileage':'', 'model':'', 'name':'Nabil', 'passwd':'youssef2010', 'pfiscale':'', 'phone':'0615016786', 'price':'10', 'price_meter':'0', 'regdate':'', 'region':'17', 'rooms':'', 'size':'', 'subject':'ddddddddd', 'type':'s', 'email_confirm' :'ayoub.benlemlih@gmail.com'},
+        self.logger.info("body form"+str(response.request.body))
+        payload={'account_type':'0', 'address':'', 'area':'154', 'beds':'', 'body':'azazazazazazazazazazazazazaz', 'brand':'', 'category_group':'7010', 'chosenVAS':'', 'chosenVasId':'', 'company_ad':'0', 'email':'ayoub.benlemlih@gmail.com', 'fuel':'', 'images[]':'', 'lang':'fr', 'mandatory_cv':'0', 'mileage':'', 'model':'', 'name':'Nabil', 'passwd':'youssef2010', 'pfiscale':'', 'phone':'0615016786', 'price':'10', 'price_meter':'0', 'regdate':'', 'region':'17', 'rooms':'', 'size':'', 'subject':'ddddddddd', 'type':'s', 'email_confirm' :'ayoub.benlemlih@gmail.com','validate':'Déposez votre annonce »'}
+        return scrapy.Request(url="https://www2.avito.ma/ai/create/0",method = 'POST',headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7', 'cache-control': 'max-age=0', 'content-type': 'multipart/form-data',  'origin': 'https://www2.avito.ma', 'referer': 'https://www2.avito.ma/ai/form/0', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'},
+                                  body=json.dumps(payload),
                                   callback=self.create,dont_filter=True)
 
     def create(self, response):
