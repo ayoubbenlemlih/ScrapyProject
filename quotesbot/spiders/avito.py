@@ -22,11 +22,11 @@ class LoginSpider(scrapy.Spider):
                 ,'email_confirm': (None, 'ayoub.benlemlih@gmail.com'),'passwd': (None, 'youssef'),'account_type': (None, '0'),'chosenVasId': (None, '')
                 ,'chosenVAS': (None, '')}
         url = 'https://www2.avito.ma/ai/create/0'
-        no_file_multipart_req = requests.Request('POST', url ,files=files,headers=headers,allow_redirects=True).prepare()
+        no_file_multipart_req = requests.Request('POST', url ,files=files,headers=headers).prepare()
         self.logger.info(no_file_multipart_req.body.decode('utf-8'))
         s = requests.Session()
         s.headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
-        r=s.send(no_file_multipart_req)
+        r=s.send(no_file_multipart_req,allow_redirects= True)
         self.logger.info(r.text)
         return
     
