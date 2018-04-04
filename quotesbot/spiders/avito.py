@@ -21,6 +21,7 @@ class LoginSpider(scrapy.Spider):
         r2=requests.get('https://www2.avito.ma/ai/form/0',cookies=cookies)
         self.logger.info(r2.text)
         cookies.update(r2.cookies)
+        self.logger.info(cookies)
         
         headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
                  'accept-encoding': 'gzip, deflate, br', 'accept-language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
