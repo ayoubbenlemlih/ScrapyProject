@@ -41,6 +41,8 @@ class LoginSpider(scrapy.Spider):
         self.logger.info(no_file_multipart_req.body.decode('utf-8'))
         s = requests.Session()
         r=s.send(no_file_multipart_req,allow_redirects= True)
+        cookies.update(r.cookies)
+        self.logger.info(cookies)
         self.logger.info(r.text)
         return
     
