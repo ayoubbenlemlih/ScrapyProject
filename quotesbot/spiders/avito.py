@@ -18,7 +18,7 @@ class LoginSpider(scrapy.Spider):
                 ,'region': (None, '17'),'area': (None, '154'),'address': (None, ''),'subject': (None, 'ffffffffffffffffffffffffffffffffffffff')
                 ,'body': (None, 'dddddddddddddddddddddddddddddddddddd'),'mandatory_cv': (None, '0'),'price': (None, '100 000')
                  ,'price_meter': (None, '0'),'images[]': ('', '','application/octet-stream'),'company_ad': (None, '0')
-                ,'name': (None, 'Nabil'),'email': (None, '7010'),'ayoub.benlemlih@gmail.com': (None, '7010'),'phone': (None, '0615016786')
+                ,'name': (None, 'Nabil'),'email': (None, 'ayoub.benlemlih@gmail.com'),'phone': (None, '0615016786')
                 ,'email_confirm': (None, 'ayoub.benlemlih@gmail.com'),'passwd': (None, 'youssef2010'),'account_type': (None, '0'),'chosenVasId': (None, '')
                 ,'chosenVAS': (None, '')}
         url = 'http://httpbin.org/anything'
