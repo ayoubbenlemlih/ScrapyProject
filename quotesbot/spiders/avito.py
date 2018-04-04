@@ -21,7 +21,7 @@ class LoginSpider(scrapy.Spider):
                 ,'name': (None, 'Nabil'),'email': (None, 'ayoub.benlemlih@gmail.com'),'phone': (None, '0615016786')
                 ,'email_confirm': (None, 'ayoub.benlemlih@gmail.com'),'passwd': (None, 'youssef2010'),'account_type': (None, '0'),'chosenVasId': (None, '')
                 ,'chosenVAS': (None, '')}
-        url = 'http://httpbin.org/anything'
+        url = 'https://www2.avito.ma/ai/create/0'
         no_file_multipart_req = requests.Request('POST', url ,files=files,headers=headers).prepare()
         self.logger.info(no_file_multipart_req.body.decode('utf-8'))
         s = requests.Session()
