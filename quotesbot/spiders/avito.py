@@ -21,8 +21,6 @@ class LoginSpider(scrapy.Spider):
         r2=requests.get('https://www2.avito.ma/ai/form/0',cookies=cookies)
         self.logger.info(r2.text)
         cookies.update(r2.cookies)
-        cookiesspecial = '<RequestsCookieJar[<Cookie name=Nabil for .avito.ma/>]>'
-        cookies.update(cookiesspecial)
         self.logger.info(cookies)
         
         headers={'authority':'www2.avito.ma','method':'POST','path':'/ai/create/0','scheme':'https','accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
