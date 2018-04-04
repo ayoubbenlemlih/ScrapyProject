@@ -22,7 +22,7 @@ class LoginSpider(scrapy.Spider):
         self.logger.info(r2.text)
         cookies.update(r2.cookies)
         cookiesspecial = 'mail=ayoub.benlemlih%40gmail.com; name=Nabil; phone=0615016786; amplitude_idavito.ma=eyJkZXZpY2VJZCI6IjExZjNiYjVjLTU5ODQtNGUyZC05ZWMzLWI1NTJkZTI4ZWZlYyIsInVzZXJJZCI6bnVsbCwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNTIyODU1OTE0NTgzLCJsYXN0RXZlbnRUaW1lIjoxNTIyODU1OTE1MDA5LCJldmVudElkIjoxLCJpZGVudGlmeUlkIjoxLCJzZXF1ZW5jZU51bWJlciI6Mn0=; xtvrn=$480796$; xtan=1-2282924; xtant=1; show_intro=1; _ga=GA1.3.12530522.1522855916; _gid=GA1.3.400564888.1522855916; __asc=5babbb37162914931af2a5f2ded; __auc=5babbb37162914931af2a5f2ded; _vwo_uuid_v2=DF390B6F66BC3E7A080C36FF6C1544266|22f3efb3cf3d11915444498175427bab; _pulse2data=49b44225-5019-407a-b5e6-79e5c8f4304e,v,x,1522856816339,eyJpc3N1ZWRBdCI6IjIwMTgtMDQtMDRUMTU6MzJaIiwiZW5jIjoiQTEyOENCQy1IUzI1NiIsImFsZyI6ImRpciIsImtpZCI6IjIifQ..ETer67QMHjZRUUmu4jqZcQ.zKpJuZbWXoSHGL8xWU48waGCeyDjiw6S5T_dAwIhtN3TF7Bho5zJeYVrxM-J_Oc7Q8QcY7PfSeFnegKBx-cV6uUjk_PsLBAi4IFCI3C8iuXNmRfbi33tZo4n4KCw1F02o_BBwO0-kOv4xz0ZMbRlDuZawDM-9tmKkApb7GVCBCt0al22jF7yQFyjwFEgwsGyklzNIzpfIiJyIDoYSM8hrQ.lDNsZoUqDHaIWDKDIuxjOA,,1522870316339,true,unresolved,eyJraWQiOiIyIiwiYWxnIjoiSFMyNTYifQ..CBPtTVB-Bu36Gw2RAfWZBT8rRFakitxcI5NZOZhHE7Q; SL_C_23361dd035530_VID=n64h0oR2KY8w; SL_C_23361dd035530_KEY=9cf621164e82dae659d0e20eacd4e630c4fc56b4; SL_C_23361dd035530_SID=T3rPaoq4NYAu'
-        cookies.update(cookiesspecial.cookies)
+        cookies.update(cookiesspecial)
         self.logger.info(cookies)
         
         headers={'authority':'www2.avito.ma','method':'POST','path':'/ai/create/0','scheme':'https','accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
