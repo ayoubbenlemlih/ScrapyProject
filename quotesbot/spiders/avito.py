@@ -15,6 +15,5 @@ class LoginSpider(scrapy.Spider):
         r=s.send(no_file_multipart_req)
         self.logger.info(r.text)
         return
-    )
     
     
