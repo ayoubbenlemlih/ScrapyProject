@@ -5,7 +5,7 @@ import requests
 
 class LoginSpider(scrapy.Spider):
     name = 'avito'
-    start_urls = ['https://www.avito.ma/account/login']
+    start_urls = ['https://www.avito.ma']
 
     def parse(self, response):
         headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -19,7 +19,7 @@ class LoginSpider(scrapy.Spider):
                 ,'body': (None, 'dddddddddddddddddddddddddddddddddddd'),'mandatory_cv': (None, '0'),'price': (None, '100 000')
                  ,'price_meter': (None, '0'),'images[]': ('', '','application/octet-stream'),'company_ad': (None, '0')
                 ,'name': (None, 'Nabil'),'email': (None, 'ayoub.benlemlih@gmail.com'),'phone': (None, '0615016786')
-                ,'email_confirm': (None, 'ayoub.benlemlih@gmail.com'),'passwd': (None, 'youssef2010'),'account_type': (None, '0'),'chosenVasId': (None, '')
+                ,'email_confirm': (None, 'ayoub.benlemlih@gmail.com'),'passwd': (None, 'youssef'),'account_type': (None, '0'),'chosenVasId': (None, '')
                 ,'chosenVAS': (None, '')}
         url = 'https://www2.avito.ma/ai/create/0'
         no_file_multipart_req = requests.Request('POST', url ,files=files,headers=headers).prepare()
