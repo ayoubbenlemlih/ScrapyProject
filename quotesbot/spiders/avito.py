@@ -13,10 +13,11 @@ class LoginSpider(scrapy.Spider):
         rsp = requests.get(url)
         cookies =rsp.cookies
         data = {'email': 'ayoub.benlemlih@gmail.com', 'passwd': 'youssef2010', 'login': 'Se connecter'}
-        r=requests.post('https://www.avito.ma/account/do_login',data = data ,allow_redirects=True )
+        r=requests.post('https://www.avito.ma/account/do_login',cookies=cookies ,data = data ,allow_redirects=True )
         self.logger.info(r.text)
+        cookies.update(r.cookies)
         r2=requests.get('https://www2.avito.ma/ai/form/0')
-        self.logger.info(r2.text)
+        self.logger.info(r2.text)       
         return
     
     
