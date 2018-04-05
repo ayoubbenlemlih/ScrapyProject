@@ -37,7 +37,7 @@ class LoginSpider(scrapy.Spider):
                 ,'email_confirm': (None, 'ayoub.benlemlih@gmail.com'),'passwd': (None, 'youssef2010'),'account_type': (None, '0'),'chosenVasId': (None, '')
                 ,'chosenVAS': (None, ''),'validate': (None, 'Déposez votre annonce »')}
         url2 = 'https://www2.avito.ma/ai/create/0'
-        url = 'http://httpbin.org/cookies'
+        url = 'http://httpbin.org/anything'
         no_file_multipart_req = requests.Request('POST', url ,files=files,cookies=cookies,headers=headers).prepare()
         self.logger.info(no_file_multipart_req.body.decode('utf-8'))
         s = requests.Session()
