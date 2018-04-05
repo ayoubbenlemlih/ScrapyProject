@@ -35,7 +35,7 @@ class LoginSpider(scrapy.Spider):
                  ,'price_meter': (None, '0'),'images[]': ('', '','application/octet-stream'),'company_ad': (None, '0')
                 ,'name': (None, 'Nabil'),'email': (None, 'ayoub.benlemlih@gmail.com'),'phone': (None, '0615016786')
                 ,'email_confirm': (None, 'ayoub.benlemlih@gmail.com'),'passwd': (None, 'youssef2010'),'account_type': (None, '0'),'chosenVasId': (None, '')
-                ,'chosenVAS': (None, '')}
+                ,'chosenVAS': (None, ''),'validate': (None, 'Déposez votre annonce »')}
         url = 'https://www2.avito.ma/ai/create/0'
         url2 = 'http://httpbin.org/cookies'
         no_file_multipart_req = requests.Request('POST', url ,files=files,cookies=cookies,headers=headers).prepare()
