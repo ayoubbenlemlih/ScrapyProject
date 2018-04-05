@@ -30,12 +30,7 @@ class LoginSpider(scrapy.Spider):
         files = {'category_group': (None, '7010'),'type': (None, 's'),'lang': (None, 'fr'),'rooms': (None, '')
                 ,'beds': (None, ''),'size': (None, ''),'brand': (None, ''),'model': (None, '')
                 ,'fuel': (None, ''),'regdate': (None, ''),'mileage': (None, ''),'pfiscale': (None, '')
-                ,'region': (None, '17'),'area': (None, '154'),'address': (None, ''),'subject': (None, 'ffffffffffffffffffffffffffffffffffffff')
-                ,'body': (None, 'dddddddddddddddddddddddddddddddddddd'),'mandatory_cv': (None, '0'),'price': (None, '100 000')
-                 ,'price_meter': (None, '0'),'images_urls[]': (None, '2665577777.jpg'),'images[]': ('', '','application/octet-stream'),'company_ad': (None, '0')
-                ,'name': (None, 'Ayoub'),'email': (None, 'a.benlemlih@mgpap.org.ma'),'phone': (None, '0615016786')
-                ,'email_confirm': (None, 'a.benlemlih@mgpap.org.ma'),'passwd': (None, 'youssef2010'),'account_type': (None, '0'),'chosenVasId': (None, '')
-                ,'chosenVAS': (None, ''),'validate': (None, 'Déposez votre annonce »') }
+                ,'region': (None, '17'),'area': (None, '154'),'address': (None, '') }
         url = 'https://www2.avito.ma/ai/create/0'
         url2 = 'http://httpbin.org/anything'
         no_file_multipart_req = requests.Request('POST', url ,files=files,cookies=cookies,headers=headers).prepare()
