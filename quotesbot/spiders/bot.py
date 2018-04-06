@@ -2,7 +2,7 @@ import scrapy
 import requests
 
 class LoginSpider(scrapy.Spider):
-    name = 'avito'
+    name = 'bot'
     start_urls = ['https://www.avito.ma']
 
     def parse(self, response):
