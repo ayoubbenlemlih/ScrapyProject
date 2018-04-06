@@ -11,7 +11,7 @@ class LoginSpider(scrapy.Spider):
         rsp = requests.get(url)
         cookies =rsp.cookies
         self.logger.info(cookies)
-        data = {'email': 'a.benlemlih@mgpap.org.ma', 'passwd': 'youssef2010', 'login': 'Se connecter'}
+        data = {'email': 'a.benlemlih@mgpap.org.ma', 'passwd': 'youssef20100', 'login': 'Se connecter'}
         r=requests.post('https://www.avito.ma/account/do_login',cookies=cookies ,data = data ,allow_redirects=False )
         self.logger.info(r.text)
         cookies.update(r.cookies)
@@ -36,7 +36,7 @@ class LoginSpider(scrapy.Spider):
                 ,'chosenVAS': (None, 'insertion'),'validate': (None, 'Déposez votre annonce »') }
         url = 'https://www2.avito.ma/ai/create/0'
         url2 = 'http://httpbin.org/anything'
-        no_file_multipart_req = requests.Request('POST', url ,files=files,headers=headers).prepare()
+        no_file_multipart_req = requests.Request('POST', url ,files=files,cookies=cookies,headers=headers).prepare()
         self.logger.info(no_file_multipart_req.body.decode('utf-8'))
         s = requests.Session()
         r=s.send(no_file_multipart_req,allow_redirects= True)
