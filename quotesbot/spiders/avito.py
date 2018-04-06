@@ -28,7 +28,7 @@ class LoginSpider(scrapy.Spider):
         files = {'category_group': (None, '7010'),'type': (None, 's'),'lang': (None, 'fr'),'rooms': (None, '')
                 ,'beds': (None, ''),'size': (None, ''),'brand': (None, ''),'model': (None, '')
                 ,'fuel': (None, ''),'regdate': (None, ''),'mileage': (None, ''),'pfiscale': (None, '')
-                ,'region': (None, '17'),'area': (None, '154'),'address': (None, ''),'subject': (None, 'nnnnnnnnnnnnnnnnnnnnnnnnnnnn')
+                ,'region': (None, '17'),'area': (None, '154'),'address': (None, ''),'subject': (None, 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkk')
                 ,'body': (None, 'dddddddddddddddddddddddddddddddddddd'),'mandatory_cv': (None, '0'),'price': (None, '100 000')
                  ,'price_meter': (None, '0'),'images_urls[]': (None, '2665577777.jpg'),'images[]': ('', '','application/octet-stream'),'company_ad': (None, '0')
                 ,'name': (None, 'Ayoub'),'email': (None, 'a.benlemlih@mgpap.org.ma'),'phone': (None, '0615016786')
