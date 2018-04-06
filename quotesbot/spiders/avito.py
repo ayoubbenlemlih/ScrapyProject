@@ -32,7 +32,7 @@ class LoginSpider(scrapy.Spider):
                 ,'body': (None, 'dddddddddddddddddddddddddddddddddddd'),'mandatory_cv': (None, '0'),'price': (None, '100 000')
                  ,'price_meter': (None, '0'),'images_urls[]': (None, '2665577777.jpg'),'images[]': ('', '','application/octet-stream'),'company_ad': (None, '0')
                 ,'name': (None, 'Ayoub'),'email': (None, 'a.benlemlih@mgpap.org.ma'),'phone': (None, '0615016786')
-                ,'email_confirm': (None, 'a.benlemlih@mgpap.org.ma'),'passwd': (None, ''),'account_type': (None, '0'),'chosenVasId': (None, '62')
+                ,'email_confirm': (None, 'a.benlemlih@mgpap.org.ma'),'passwd': (None, 'youssef2010'),'account_type': (None, '0'),'chosenVasId': (None, '62')
                 ,'chosenVAS': (None, 'insertion'),'validate': (None, 'Déposez votre annonce »') }
         url = 'https://www2.avito.ma/ai/create/0'
         url2 = 'http://httpbin.org/anything'
