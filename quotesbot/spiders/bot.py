@@ -13,16 +13,13 @@ class LoginSpider(scrapy.Spider):
                  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
         rsp = requests.get(url,headers=headers)
         cookies =rsp.cookies
-        self.logger.info(cookies)
         data = {'email': 'a.benlemlih@mgpap.org.ma', 'passwd': 'youssef2010', 'login': 'Se connecter'}
         r=requests.post('https://www.avito.ma/account/do_login',cookies=cookies ,data = data ,allow_redirects=False )
-        self.logger.info(r.text)
+        #self.logger.info(r.text)
         cookies.update(r.cookies)
-        self.logger.info(cookies)
         r2=requests.get('https://www2.avito.ma/ai/form/0',cookies=cookies,headers=headers)
-        self.logger.info(r2.text)
+        #self.logger.info(r2.text)
         cookies.update(r2.cookies)
-        self.logger.info(cookies)
         
         headers={'authority':'www2.avito.ma','method':'POST','path':'/ai/create/0','scheme':'https','accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
                  'accept-encoding': 'gzip, deflate, br', 'accept-language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
@@ -39,10 +36,10 @@ class LoginSpider(scrapy.Spider):
                 ,'chosenVAS': (None, 'insertion'),'validate': (None, 'Déposez votre annonce »') }
         url = 'https://www2.avito.ma/ai/create/0'
         p = requests.Request('POST', url ,files=files,cookies=cookies,headers=headers).prepare()
-        self.logger.info(p.body.decode('utf-8'))
+        #self.logger.info(p.body.decode('utf-8'))
         s = requests.Session()
         r3=s.send(p,allow_redirects= True)
         cookies.update(r3.cookies)
-        self.logger.info(cookies)
+        #self.logger.info(cookies)
         self.logger.info(r3.text)
         return
