@@ -44,5 +44,5 @@ class LoginSpider(scrapy.Spider):
         r3=s.send(p,allow_redirects= True)
         cookies.update(r3.cookies)
         self.logger.info(cookies)
-        self.logger.info(r.text)
+        self.logger.info(r3.text)
         return
