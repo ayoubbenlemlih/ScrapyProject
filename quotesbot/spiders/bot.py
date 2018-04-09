@@ -1,5 +1,6 @@
 import scrapy
 import requests
+import urllib2
 
 class LoginSpider(scrapy.Spider):
     name = 'avito'
