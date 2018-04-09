@@ -1,7 +1,6 @@
 import scrapy
 import requests
-#from urllib import Request
-
+import urllib
 class LoginSpider(scrapy.Spider):
     name = 'avito'
     start_urls = ['https://www.avito.ma']
@@ -26,7 +25,7 @@ class LoginSpider(scrapy.Spider):
                  'accept-encoding': 'gzip, deflate, br', 'accept-language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
                  'cache-control': 'max-age=0','origin': 'https://www2.avito.ma', 'referer': 'https://www2.avito.ma/ai/form/0', 'upgrade-insecure-requests': '1',
                  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
-       # img =  Request.urlopen('https://www.avito.ma/thumbs/26/2665577777.jpg ')
+        img =  urllib.request.urlopen('https://www.avito.ma/thumbs/26/2665577777.jpg ')
         
         files = {'category_group': (None, '7010'),'type': (None, 's'),'lang': (None, 'fr'),'rooms': (None, '')
                 ,'beds': (None, ''),'size': (None, ''),'brand': (None, ''),'model': (None, '')
