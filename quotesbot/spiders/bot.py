@@ -38,7 +38,7 @@ class LoginSpider(scrapy.Spider):
                 ,'chosenVAS': (None, 'insertion'),'validate': (None, 'Déposez votre annonce »') }
         url = 'https://www2.avito.ma/ai/create/0'
         p = requests.Request('POST', url ,files=files,cookies=cookies,headers=headers).prepare()
-        #self.logger.info(p.body.decode('utf-8'))
+        self.logger.info(p.body.decode('utf-8'))
         s = requests.Session()
         r3=s.send(p,allow_redirects= True)
         cookies.update(r3.cookies)
