@@ -13,7 +13,7 @@ class LoginSpider(scrapy.Spider):
                  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
         rsp = requests.get(url,headers=headers)
         cookies =rsp.cookies
-        data = {'email': 'a.benlemlih@mgpap.org.ma', 'passwd': 'youssef2010', 'login': 'Se connecter'}
+        data = {'email': 'ayoub.benlemlih@gmail.com', 'passwd': 'youssef2010', 'login': 'Se connecter'}
         r=requests.post('https://www.avito.ma/account/do_login',cookies=cookies ,data = data ,allow_redirects=False )
         #self.logger.info(r.text)
         cookies.update(r.cookies)
@@ -33,7 +33,7 @@ class LoginSpider(scrapy.Spider):
                 ,'region': (None, '17'),'area': (None, '154'),'address': (None, ''),'subject': (None, 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeesept')
                 ,'body': (None, '•	Dzazzzzzzzzzzzz \n •	zaddzzzzzzz'),'mandatory_cv': (None, '0'),'price': (None, '100 000')
                  ,'price_meter': (None, '0'),'images_urls[]': (None, '2665577777.jpg'),'images[]': ('', '','application/octet-stream'),'company_ad': (None, '0')
-                ,'name': (None, 'Ayoub'),'email': (None, 'a.benlemlih@mgpap.org.ma'),'phone': (None, '0615016786')
+                ,'name': (None, 'Ayoub'),'email': (None, 'ayoub.benlemlih@gmail.com'),'phone': (None, '0615016786')
                 ,'email_confirm': (None, 'a.benlemlih@mgpap.org.ma'),'passwd': (None, ''),'account_type': (None, '0'),'chosenVasId': (None, '62')
                 ,'chosenVAS': (None, 'insertion'),'validate': (None, 'Déposez votre annonce »') }
         url = 'https://www2.avito.ma/ai/create/0'
